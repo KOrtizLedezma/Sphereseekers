@@ -2,7 +2,7 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-uid="uid://d08pfsmuehre8"
+uid="uid://drtaeqa1enbla"
 path="res://.godot/imported/Medieval Marble.mp3-122cb4562fa2430758072800fa780c06.mp3str"
 
 [deps]
@@ -12,8 +12,8 @@ dest_files=["res://.godot/imported/Medieval Marble.mp3-122cb4562fa2430758072800f
 
 [params]
 
-loop=true
-loop_offset=0.0
-bpm=0.0
+loop=false
+loop_offset=0
+bpm=0
 beat_count=0
 bar_beats=4

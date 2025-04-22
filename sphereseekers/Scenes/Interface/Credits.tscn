@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://chtssvbh8c4oc"]
 
 [ext_resource type="Script" uid="uid://2cqn6k1ucnjk" path="res://Scripts/Interface/credits.gd" id="1_r6qhf"]
-[ext_resource type="AudioStream" uid="uid://cw4hhvjnpginb" path="res://Assets/Audio/Siochain Shuthain Smaller part.mp3" id="2_3vjqm"]
+[ext_resource type="AudioStream" uid="uid://dvvnpw8byy61n" path="res://Assets/Audio/On the Horizon.mp3" id="2_3vjqm"]
 
 [node name="GodotCredits" type="Node2D"]
 script = ExtResource("1_r6qhf")

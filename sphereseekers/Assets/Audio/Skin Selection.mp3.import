@@ -2,7 +2,7 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-uid="uid://de4tqe6ss774g"
+uid="uid://d05sn6g047ncw"
 path="res://.godot/imported/Skin Selection.mp3-0d838d78192ec0691d6ac83febdda217.mp3str"
 
 [deps]
@@ -12,8 +12,8 @@ dest_files=["res://.godot/imported/Skin Selection.mp3-0d838d78192ec0691d6ac83feb
 
 [params]
 
-loop=true
-loop_offset=0.0
-bpm=0.0
+loop=false
+loop_offset=0
+bpm=0
 beat_count=0
 bar_beats=4

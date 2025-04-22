@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dhl0vwlt88xre" path="res://Scenes/Objects/level_4_floor/level_4_floor.tscn" id="6_t74h0"]
 [ext_resource type="PackedScene" uid="uid://copu860806ql0" path="res://Scenes/Objects/teleport_platform/teleport_platform.tscn" id="7_i4hbv"]
 [ext_resource type="Script" uid="uid://cip48r0khg2se" path="res://Scenes/Objects/teleport_platform/random_teleporter.gd" id="8_h0uxt"]
-[ext_resource type="AudioStream" uid="uid://n8mjandgknw" path="res://Assets/Audio/labyrinth.mp3" id="9_keyqw"]
+[ext_resource type="AudioStream" uid="uid://dotavf401wb5v" path="res://Assets/Audio/labyrinth.mp3" id="9_keyqw"]
 [ext_resource type="Script" uid="uid://iv37c4cpfund" path="res://Scripts/Interface/stopwatch.gd" id="10_3asqb"]
 [ext_resource type="Script" uid="uid://cx3m1ohxd464m" path="res://Scripts/Interface/besttime.gd" id="11_slbhm"]
 
@@ -84,6 +84,7 @@ script = ExtResource("8_h0uxt")
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="TeleportPlatform"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 265.407, 10, 24.157)
 stream = ExtResource("9_keyqw")
+volume_db = -5.0
 autoplay = true
 
 [node name="UI" type="CanvasLayer" parent="."]
