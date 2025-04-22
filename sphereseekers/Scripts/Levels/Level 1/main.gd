@@ -3,7 +3,7 @@ extends Node3D
 var controls_menu_instance = null
 var pause_menu_instance = null
 
-@onready var canvas_layer = $CanvasLayer
+var canvas_layer
 var pause_btn
 
 # Called when the node enters the scene tree for the first time.
@@ -68,16 +68,17 @@ func unpause_game():
 	get_tree().paused = false
 
 func show_hide_btns():
-	if Global.is_paused:
-		if Global.jump_btn.visible:
-			Global.jump_btn.visible = false
-			Global.stop_btn.visible = false
-			Global.spin_btn.visible = false
-	else:
-		if not Global.jump_btn.visible:
-			Global.jump_btn.visible = true
-			Global.stop_btn.visible = true
-			Global.spin_btn.visible = true
+	if Global.is_mobile:
+		if Global.is_paused:
+			if Global.jump_btn.visible:
+				Global.jump_btn.visible = false
+				Global.stop_btn.visible = false
+				Global.spin_btn.visible = false
+		else:
+			if not Global.jump_btn.visible:
+				Global.jump_btn.visible = true
+				Global.stop_btn.visible = true
+				Global.spin_btn.visible = true
 
 func create_pause_button():
 	var screen_size = get_viewport().get_visible_rect().size

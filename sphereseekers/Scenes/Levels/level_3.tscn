@@ -8,7 +8,7 @@
 [ext_resource type="Material" uid="uid://w5n4a03t0r7u" path="res://Assets/Materials/cartoon/dragon_scales_toon/dragon_scales_toon.tres" id="5_x1k1j"]
 [ext_resource type="PackedScene" uid="uid://c6g4hpuxd6xgd" path="res://Scenes/Objects/level_3_floor/level_3_floor.tscn" id="7_167vu"]
 [ext_resource type="Script" uid="uid://c3nmstgb3dbw8" path="res://Scripts/Objects/limit.gd" id="8_x1k1j"]
-[ext_resource type="AudioStream" uid="uid://dtrycrd8w7tmk" path="res://Assets/Audio/Level 3.mp3" id="9_4ahh4"]
+[ext_resource type="AudioStream" uid="uid://bbw8avivuj3ci" path="res://Assets/Audio/Level 3.mp3" id="9_osqx1"]
 [ext_resource type="Script" uid="uid://iv37c4cpfund" path="res://Scripts/Interface/stopwatch.gd" id="10_osqx1"]
 [ext_resource type="Script" uid="uid://cx3m1ohxd464m" path="res://Scripts/Interface/besttime.gd" id="11_sy7oa"]
 
@@ -93,7 +93,7 @@ shape = SubResource("BoxShape3D_4ahh4")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(2, 63.3921)
-stream = ExtResource("9_4ahh4")
+stream = ExtResource("9_osqx1")
 autoplay = true
 
 [node name="UI" type="CanvasLayer" parent="."]

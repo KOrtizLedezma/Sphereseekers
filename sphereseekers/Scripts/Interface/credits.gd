@@ -37,6 +37,7 @@ var credits = [
 	["Advisor", "", "Carsten Thue-Bludworth"],
 	[
 		"Tools used", "",
+		"",
 		"Developed with Godot Engine", "",
 		"https://godotengine.org/license",
 		"",
@@ -50,7 +51,7 @@ var credits = [
 		"https://www.guitar-pro.com/",
 		""
 	],
-	["Special thanks", "", "Our Families", "", "Our friends", "", "Our Advisor"],
+	["Special thanks", "", "Our Families", "", "Our Friends", "", "Our Advisor"],
 	[""],
 	[""],
 	["Thank you for playing!"]

@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://blwcgg18dx5gs" path="res://Scenes/Objects/tower/tower.tscn" id="7_jv26f"]
 [ext_resource type="Script" uid="uid://c3nmstgb3dbw8" path="res://Scripts/Objects/limit.gd" id="8_jv26f"]
 [ext_resource type="PackedScene" uid="uid://copu860806ql0" path="res://Scenes/Objects/teleport_platform/teleport_platform.tscn" id="8_rb0md"]
-[ext_resource type="AudioStream" uid="uid://d08pfsmuehre8" path="res://Assets/Audio/Medieval Marble.mp3" id="9_rb0md"]
+[ext_resource type="AudioStream" uid="uid://drtaeqa1enbla" path="res://Assets/Audio/Medieval Marble.mp3" id="9_rb0md"]
 [ext_resource type="Script" uid="uid://iv37c4cpfund" path="res://Scripts/Interface/stopwatch.gd" id="10_hwvp3"]
 [ext_resource type="Script" uid="uid://cx3m1ohxd464m" path="res://Scripts/Interface/besttime.gd" id="11_afv7b"]
 
@@ -100,12 +100,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 100, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 56.0734, 0)
 omni_range = 55.561
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 113.779, 0)
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(0, 113.779)
 stream = ExtResource("9_rb0md")
 autoplay = true
-emission_angle_enabled = true
-emission_angle_degrees = 90.0
 
 [node name="UI" type="CanvasLayer" parent="."]
 script = SubResource("GDScript_7r2dd")

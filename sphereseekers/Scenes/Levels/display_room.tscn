@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://cfgw6hvo76qt1" path="res://Assets/previews/trival.png" id="13_strqh"]
 [ext_resource type="Texture2D" uid="uid://370veh27kuh5" path="res://Assets/buttons/confirm_btn_2x1.png" id="15_dgjqd"]
 [ext_resource type="Texture2D" uid="uid://cnv4wc7tvvivh" path="res://Assets/backgrounds/anime-style-clouds.jpg" id="15_m2e68"]
-[ext_resource type="AudioStream" uid="uid://de4tqe6ss774g" path="res://Assets/Audio/Skin Selection.mp3" id="16_dgjqd"]
+[ext_resource type="AudioStream" uid="uid://d05sn6g047ncw" path="res://Assets/Audio/Skin Selection.mp3" id="16_dgjqd"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_ulca6"]
 panorama = ExtResource("15_m2e68")

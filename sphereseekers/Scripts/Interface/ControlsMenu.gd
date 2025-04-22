@@ -12,10 +12,10 @@ var action_names = {
 }
 
 var action_keys = {
-	"move_forward": ["W", "↑"],
-	"move_backward": ["S", "↓"],
-	"move_left": ["A", "←"],
-	"move_right": ["D", "→"],
+	"move_forward": ["W", "UP"],
+	"move_backward": ["S", "DOWN"],
+	"move_left": ["A", "LEFT"],
+	"move_right": ["D", "RIGHT"],
 	"jump": ["Space", "End"],
 	"stop": ["Shift"]
 }
@@ -258,7 +258,7 @@ func set_objects_for_smartphone(background, label, button):
 
 	# Tip 3
 	var tip3 = Label.new()
-	tip3.text = "Tip: Hold 'Stop' and press 'Jump' to boost forward!"
+	tip3.text = "Tip: Don't forget to press the Gyroscope button to begin."
 	tip3.add_theme_font_size_override("font_size", 32)
 	tip3.autowrap_mode = TextServer.AUTOWRAP_WORD
 	tips_container.add_child(tip3)

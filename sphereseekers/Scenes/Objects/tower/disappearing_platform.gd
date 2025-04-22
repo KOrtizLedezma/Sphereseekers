@@ -6,6 +6,9 @@ extends MeshInstance3D
 @onready var collision_shape = $StaticBody3D/CollisionShape3D 
 
 func _ready():
+	if(Global.is_mobile):
+		disappear_delay = disappear_delay * 2;
+	
 	var area = Area3D.new()
 	add_child(area)
 	
