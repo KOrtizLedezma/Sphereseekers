@@ -44,7 +44,19 @@ func _ready() -> void:
 	
 	
 func _on_Continue_pressed() -> void:
-	pass
+	var recent_save = LocalStorage.get_recent_save()
+
+	if recent_save == null:
+		return
+
+	PlayerClass.clear_player()
+	PlayerClass.load_game(recent_save)
+	Global.in_main_menu = false
+
+	# Make sure that Cannons will shoot
+	Global.stop_all_projectiles = false
+	MusicPlayer.find_child("AudioStreamPlayer2D").stop()
+	get_tree().change_scene_to_file("res://Scenes/Interface/loading_screen.tscn")
 
 func _on_new_game_pressed() -> void:	
 	get_tree().change_scene_to_file("res://Scenes/Interface/SetNameMenu.tscn")
@@ -101,6 +113,21 @@ func set_objects_for_desktop() -> Array:
 		btn.set_size(Vector2(button_width, button_height))
 		btn.position = Vector2(-button_width, y_pos)
 
+		if i == 0:
+			var overlay = ColorRect.new()
+			overlay.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+			overlay.color = Color(0, 0, 0, 0.4)
+			overlay.mouse_filter = Control.MOUSE_FILTER_IGNORE
+
+			btn.add_child(overlay)
+			var recent_save = LocalStorage.get_recent_save()
+			if recent_save == null: 
+				overlay.visible = true
+				btn.disabled = true
+			else: 
+				overlay.visible = false
+				btn.disabled = false
+				
 		var target = Vector2(spacing + i * (button_width + spacing), y_pos)
 		button_targets.append({ "button": btn, "target": target })
 
@@ -133,12 +160,28 @@ func set_objects_for_mobile() -> Array:
 		continue_btn, new_game_btn, load_game_btn,
 		options_btn, skins_btn, credits_btn
 	]
-
+	
 	var button_targets = []
 
 	for i in buttons.size():
 		var btn = buttons[i]
 		btn.set_size(Vector2(button_width, button_height))
+		
+		if i == 0:
+			var overlay = ColorRect.new()
+			overlay.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+			overlay.color = Color(0, 0, 0, 0.4)
+			overlay.mouse_filter = Control.MOUSE_FILTER_IGNORE
+
+			btn.add_child(overlay)
+			var recent_save = LocalStorage.get_recent_save()
+			if recent_save == null: 
+				overlay.visible = true
+				btn.disabled = true
+			else: 
+				overlay.visible = false
+				btn.disabled = false
+				
 		var target_x = (w - button_width) / 2
 		var target_y = start_y + i * (button_height + spacing)
 		btn.position = Vector2(target_x, h + button_height)
